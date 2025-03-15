@@ -1,0 +1,101 @@
+<html>
+    <head lang = "en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            TaskStreak : Stay productive with Streaks !!
+        </title>
+        <link rel = "stylesheet" href = "styles.css">
+
+        <style>
+            
+            a.cta-button {
+                background-color: #007BFF;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition: 0.3s;
+                text-decoration: none;
+            }
+
+            a.cta-button:hover {
+                background-color: #0056b3;
+            }
+            
+            
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <!--logo/title-->
+            <div class = "logo">
+                <img src = "D:\TaskStreak\TaskStreak.png" alt = "TaskStreak Logo">
+            </div>
+            <!--tagline "Stay Productive with streaks"-->
+            <div class = "title">
+                <h1> TaskStreak</h1>
+                <p class = "tagline"> Stay Productive with Streaks !!</p>
+            </div>
+        </header>
+
+        <section class="introduction">
+            <h2>Welcome to TaskStreak</h2>
+            <p>
+                TaskStreak is your ultimate productivity companion. Track your daily tasks, 
+                earn points for completing them, and maintain streaks to keep your momentum going!
+            </p>
+            <p>
+                With our unique streak system, you'll feel motivated to stay consistent. 
+                Each task you complete brings you closer to your productivity goals!
+            </p>
+            <a href = "task-list.html" class = "cta-button"> Let's Lock In !! </a>
+        </section>
+
+        <script>
+                    // Get references to elements
+        const lockInButton = document.querySelector(".cta-button"); // "Let's Lock In" button
+        const accountPage = document.querySelector(".account-page"); // Modal container
+        const closeButton = document.createElement("span"); // Close button
+
+        // Add close button to the modal
+        closeButton.className = "close-button";
+        closeButton.innerHTML = "&times;"; // X symbol
+        document.getElementById("login").appendChild(closeButton);
+
+        // Open the modal
+        lockInButton.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent default link behavior
+            accountPage.style.display = "block"; // Show modal
+        });
+
+        // Close the modal
+        closeButton.addEventListener("click", () => {
+            accountPage.style.display = "none"; // Hide modal
+        });
+
+        // Close modal when clicking outside the form
+        window.addEventListener("click", (e) => {
+            if (e.target === accountPage) {
+                accountPage.style.display = "none";
+            }
+        });
+        </script>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 TaskStreak. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </footer>
+        
+    </body>
+</html>

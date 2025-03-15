@@ -1,0 +1,157 @@
+<html>
+    <head lang = "en">
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width-device-width", initial-scale="1.0">
+        <title>
+            TaskStreak : Stay productive with Streaks !!
+        </title>
+        <link rel = "stylesheet" href = "styles.css">
+
+        <style>
+
+            /* Task-List */
+            .task-section {
+                max-width: 600px;
+                margin: 20px auto;
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .task-section h2 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            /* Task Form */
+            #task-form {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            #task-input {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            #add-task-btn {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3
+            }
+
+            #add-task-btn:hover {
+                background-color: #0056b3;
+            }
+
+            /* Task List */
+            #task-list {
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            #task-list li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            
+            #task-list li label {
+                margin-left: 10px;
+            }
+            
+            .delete-btn {
+                margin-left: auto;
+                background-color: red;
+                color: white;
+                border: none;
+                padding: 5px;
+                cursor: pointer;
+            }
+            
+            .delete-btn:hover {
+                background-color: darkred;
+            }
+            
+            .task-complete {
+                text-decoration: line-through;
+                color: gray;
+            }
+            
+
+            #streak-container {
+                margin-top: 20px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+            }
+            
+            #streak-count {
+                color: #e74c3c; /* Red for a fiery look */
+            }
+            
+            #points {
+                margin-top: 10px;
+                font-size: 18px;
+                color: green;
+            }
+
+            #roll-back {
+                padding: 10px 20px;
+                font-size: 18px;
+                background-color: #007BFF;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            #home {
+                padding: 10px;
+                color: white;
+                text-decoration: none;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <!--logo/title-->
+            <div class = "logo">
+                <img src = "D:\TaskStreak\TaskStreak.png" alt = "TaskStreak Logo">
+            </div>
+            <!--tagline "Stay Productive with streaks"-->
+            <div class = "title">
+                <h1> TaskStreak</h1>
+                <p class = "tagline"> Stay Productive with Streaks !!</p>
+            </div>
+        </header>
+
+        <!--Task-List-->
+        <section class = "task-list">
+            <h2> MY TASKS !! </h2>
+            <form id = "task-form">
+                <input type="text" id="task-input" placeholder="Enter a new task..." required />
+                <button type="submit" id="add-task-btn">Add Task</button>
+            </form>
+            <ul id = "task-list"></ul>
+            <div id="streak-container">
+                <p>Current Streak: <span id="streak-count">0</span> 🔥</p>
+            </div>
+            <div id="points">
+                Points: <span id="points-count">0</span>
+            </div>
+            <button id = "roll-back"><a href = "index.html" id = "home"> Home </a> </button>
+            <script src="script3.js"></script>
+        </section>
+    </body>
