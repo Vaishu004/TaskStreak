@@ -1,2 +1,2 @@
 # TaskStreak
-my first wed development project
+my first web development project
